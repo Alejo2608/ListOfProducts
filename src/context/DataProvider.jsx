@@ -23,8 +23,9 @@ export const DataProvider = (props) => {
 		}else{
 			setProductos([])
 		}
-	}, []);
-	
+	}, [Data]);
+	console.log(carrito)
+
 	const addCarrito = (id) =>{
 		const check = carrito.every(e =>{
 			return e.id !== id
