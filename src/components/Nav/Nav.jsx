@@ -25,14 +25,13 @@ export default function NavP() {
         <div className="pt2">
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Productos</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Link to="/home">Productos</Link>
           </Nav>
         </Navbar.Collapse>
         </div>
         <div className="pt3">
         <Nav>
-            <Nav.Link href="#deets"  onClick={changeMenu}>Lista</Nav.Link>
+            <Nav.Link  onClick={changeMenu}>Lista</Nav.Link>
         </Nav>
         </div>
       </Container>

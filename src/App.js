@@ -6,6 +6,7 @@ import NavP from './components/Nav/Nav';
 import List from './components/List/List';
 import { DataProvider } from './context/DataProvider';
 import Footer from './components/Footer/Footer';
+import Paginated from './components/Paginated/Paginated';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/home' element={<Home/>}/>
         </Routes>
         <Footer/>
+
       </div>
     </DataProvider>
   );

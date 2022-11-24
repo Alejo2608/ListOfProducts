@@ -3,12 +3,24 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/actions";
 import Card from "../Card/Card";
 import "../../css/home.css"
+import { useState } from "react";
+import Paginated from "../Paginated/Paginated";
 
 
 export default function Home(){
     const dispatch=useDispatch()
     const allProducts=useSelector((state)=>state.info)
+    const [orden,setOrden]=useState("")
+    const [currentPage,setCurrentPage]=useState(1)
+    const [productsPerPage, setProductsPerPage]=useState(4)
+    const indexOfLastProduct=currentPage * productsPerPage
+    const indexOfFirstProduct=indexOfLastProduct - productsPerPage
+    const currentProducts=allProducts.slice(indexOfFirstProduct,indexOfLastProduct)
     console.log(allProducts)
+
+    const paginated=(pageNumber)=>{
+        setCurrentPage(pageNumber)
+    }
 
     useEffect(()=>{
         dispatch(getProducts())
@@ -20,7 +32,7 @@ export default function Home(){
             </div>
             <div className="ca">
                 {
-                    allProducts?.map(e=>{
+                    currentProducts?.map(e=>{
                         return(
                             <fragment key={e.id}>
                                 <Card
@@ -34,6 +46,11 @@ export default function Home(){
                     })
                 }
             </div>
+            <Paginated
+            productsPerPage={productsPerPage}
+            allProducts={allProducts.length}
+            paginated={paginated}
+            />
         </div>
     )
 }

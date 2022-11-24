@@ -1,0 +1,26 @@
+.paginate{
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .paginated{
+  
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .paginated button{
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+    justify-content: space-around;
+    background-color: white;
+    color: black;
+    
+  }
+  .number{
+    list-style: none;
+  }
+  
+  
