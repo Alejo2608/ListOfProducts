@@ -29,7 +29,7 @@ export default function List(){
                         <img src={e.images[0]} alt="img_not fund" />
                     </div>
                     <div className="liT">
-                        <h4>Titulo</h4>
+                        <h4>{e.title}</h4>
                     </div>
                     <div className="pri">
                         <p className="Pric">{e.price}$</p>
