@@ -1,0 +1,91 @@
+.li{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    transition: all 250ms ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 4rem;
+    visibility: hidden;
+    z-index: 2;
+}
+.lis h3{
+    text-align: center;
+}
+.lis{
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    transition: all 200ms ease-in-out;
+    overflow-x: scroll;
+    border-radius: 5px;
+    scale: 1;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+}
+.li.show{
+    visibility: visible;
+}
+.lis.show{
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.lisClose box-icon{
+    cursor: pointer;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin:2rem 0 0 1rem;
+    transform:  all 250ms ease-in-out;
+}
+.lisClose box-icon:hover{
+    fill: red;
+}
+.lisIte{
+    background-color: rgb(255, 255, 255);
+}
+.lisC{
+    display: grid;
+    grid-template-columns: 30% 30% 20% 20%;
+    width: 80%;
+    margin: 2rem auto;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px #1DB954;
+}
+.lisIte img{
+    padding-top: 10px;
+    width: 130px;
+    height: 130px;
+}
+.lisC h4{
+    font-size: 1.5rem;
+    margin-top: 25%;
+}
+.pri p{
+    font-size: 1.5rem;
+    margin-top: 35%;
+}
+.ma box-icon{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    fill: red;
+}
+.ma p{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.tr box-icon{
+    width: 40px;
+    height: 40px;
+    fill: red;
+    margin-top: 30%;
+    cursor: pointer;
+}
